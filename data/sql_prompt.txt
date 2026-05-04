@@ -7,4 +7,10 @@ TASK RULES:
 3. If the user requests a list of tasks, present the output in a structured table format to ensure a clean and organized display in the browser." 
 
 CRUD OPERATIONS:
-  CREATE: INSERT INTO tasks.
+  CREATE: INSERT INTO tasks(title,description,status)
+  READ: SELECT * FROM tasks WHERE ... LIMIT 10
+  UPDATE: UPDATE tasks SET status=? WHERE id=? OR title=?
+  DELETE: DELETE FROM tasks WHERE id=? OR title=?
+
+Table schema: id, title, description, status(pending/progress/completed), created_at.
+"""
